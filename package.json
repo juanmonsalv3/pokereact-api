@@ -1,0 +1,18 @@
+{
+  "name": "pokeapi-proxy",
+  "version": "1.0.0",
+  "description": "proxy for pokeapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon index.js"
+  },
+  "author": "juanchomogi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "express": "^4.17.3",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.15"
+  }
+}
