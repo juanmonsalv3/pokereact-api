@@ -10,6 +10,15 @@ router.get('', async function (req, res) {
   res.json(response);
 });
 
+/**
+ * @swagger
+ * /pokemon/region/:regionName:
+ *  get: 
+ *    description: use to get region info with pokemons
+ *    responses:
+ *      '200':
+ *        description: Succesful response
+ */
 // pokemon/region/:regionName
 router.get('/region/:regionName', async function (req, res) {
   const response = await pokedex.getPokedexByName(req.params.regionName);
@@ -30,7 +39,15 @@ router.get('/region/:regionName', async function (req, res) {
   return res.json(formattedPokemons);
 });
 
-// pokemon/:name
+/**
+ * @swagger
+ * /pokemon/:name:
+ *  get: 
+ *    description: use to get a pokemon info
+ *    responses:
+ *      '200':
+ *        description: Succesful response
+ */
 router.get('/:name', async function (req, res) {
   const pokemon = await pokedex.getPokemonByName(req.params.name);
   res.json(pokemon.data);
